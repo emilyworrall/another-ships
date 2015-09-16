@@ -2,7 +2,7 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', 'lib/another_ships.rb')
+require File.join(File.dirname(__FILE__), '..', 'lib/Another_ships.rb')
 
 require 'capybara'
 require 'capybara/rspec'

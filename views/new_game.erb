@@ -1,1 +1,13 @@
-NO
+<table style="width:495px; margin-left: 30px; font-family: Arial">
+  <tr>
+    <% (1..10).to_a.each do |x| %>
+     <td> <%= x %> </td>
+    <% end %>
+  </tr>
+</table>
+
+<div style='display: inline-block; height: 370px; font-family: Arial;'>
+  <% ("A".."J").to_a.each do |x| %>
+    <div style="height: 48px"><%= x %></div>
+  <% end %>
+</div>
