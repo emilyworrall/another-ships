@@ -1,8 +1,13 @@
 require 'sinatra/base'
 
-class another_ships < Sinatra::Base
+class Another_ships < Sinatra::Base
+  set :views, proc {File.join(root,'..','/views')}
   get '/' do
-    'Hello another_ships!'
+    erb :index
+  end
+
+  get '/new_player' do
+    erb :new_player
   end
 
   # start the server if ruby file executed directly
