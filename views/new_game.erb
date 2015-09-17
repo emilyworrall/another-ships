@@ -1,3 +1,6 @@
+<html>
+<body background="http://www.oriooli.com/wp-content/uploads/2014/07/Iowa-class-battleship-0.jpg">
+
 <table style="width:495px; margin-left: 30px; font-family: Arial">
   <tr>
     <% (1..10).to_a.each do |x| %>
@@ -45,10 +48,30 @@
 
 <form action='/new_game' style="font-family: Arial;">
   <table style='width: 450px;'>
-  <br> Aircraft Carrier
   <tr>
+  <td> Aircraft Carrier </td>
      <td> <input type="text" name="coords_1" placeholder='coordinates'> </td>
      <td> <input type="text" name="orient_1" placeholder='direction'> </td>
+    </tr>
+  <tr>
+  <td> Battleship </td>
+     <td> <input type="text" name="coords_2" placeholder='coordinates'> </td>
+     <td> <input type="text" name="orient_2" placeholder='direction'> </td>
+    </tr>
+  <tr>
+  <td> Destroyer </td>
+     <td> <input type="text" name="coords_3" placeholder='coordinates'> </td>
+     <td> <input type="text" name="orient_3" placeholder='direction'> </td>
+    </tr>
+  <tr>
+  <td> Submarine </td>
+     <td> <input type="text" name="coords_4" placeholder='coordinates'> </td>
+     <td> <input type="text" name="orient_4" placeholder='direction'> </td>
+    </tr>
+  <tr>
+  <td> Patrol Boat </td>
+     <td> <input type="text" name="coords_5" placeholder='coordinates'> </td>
+     <td> <input type="text" name="orient_5" placeholder='direction'> </td>
     </tr>
   </table>
        <input type="submit" value="Submit">
