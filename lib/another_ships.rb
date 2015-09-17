@@ -15,7 +15,14 @@ class Another_ships < Sinatra::Base
 
   get '/new_game' do
     @board = Board.new(Cell)
+    @aircraft_carrier = Ship.aircraft_carrier
     @name = params[:name]
+    coords_1 = params[:coords].to_sym if params[:coords_1]
+    orient_1 = params[:orient_1].to_sym if params[:orient_1]
+    if coords_1 && orient_1
+      $board.place(@destroyer, coords_1, orient_1)
+    end
+
     erb :new_game
   end
 
