@@ -1,7 +1,7 @@
 <table style="width:495px; margin-left: 30px; font-family: Arial">
   <tr>
     <% (1..10).to_a.each do |x| %>
-     <td> <%= x %> </td>
+    <td> <%= x %> </td>
     <% end %>
   </tr>
 </table>
@@ -15,11 +15,13 @@
 <div style='display: inline-block; height: 370px; width: 480px'>
   <% @board.grid.each do |key,value| %>
     <% if value.hit? == false %>
-      <div style='display: inline-block; border: 1px solid grey; height:40px; width: 40px; background-color:#c6e2ff'>
+      <div style='display: inline-block; border: 1px solid grey; height:
+      40px; width: 40px; background-color:#c6e2ff'>
       <% key %>
       </div>
     <% else %>
-      <div style='display: inline-block; border: 1px solid grey; height: 40px; width: 40px; background-color:#ffff32'>
+      <div style='display: inline-block; border: 1px solid grey; height:
+      40px; width: 40px; background-color:#ffff32'>
       <% key %>
       </div>
     <% end %>
@@ -29,32 +31,32 @@
 <form action='new_game' style="font-family: Arial;">
   <table style='width: 450px;'>
     <tr>
-      <td> Aircraft Carrier </td>
-        <td> <input type="text" name="direction" placeholder='direction'> </td>
-        <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
+       <td> Aircraft Carrier </td>
+       <td> <input type="text" name="direction" placeholder='direction'> </td>
+       <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
+    </tr>
+     <tr>
+       <td> Battleship </td>
+       <td> <input type="text" name="direction" placeholder='direction'> </td>
+       <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
+    </tr>
+       <tr>
+       <td> Destroyer </td>
+       <td> <input type="text" name="direction" placeholder='direction'> </td>
+       <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
     </tr>
     <tr>
-      <td> Battleship </td>
-        <td> <input type="text" name="direction" placeholder='direction'> </td>
-        <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
+       <td> Submarine </td>
+       <td> <input type="text" name="direction" placeholder='direction'> </td>
+       <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
     </tr>
-     <tr>
-      <td> Destroyer </td>
-        <td> <input type="text" name="direction" placeholder='direction'> </td>
-        <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
-    </tr>
-     <tr>
-      <td> Submarine </td>
-        <td> <input type="text" name="direction" placeholder='direction'> </td>
-        <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
-    </tr>
-     <tr>
-      <td> Patrol Boat </td>
-        <td> <input type="text" name="direction" placeholder='direction'> </td>
-        <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
+    <tr>
+       <td> Patrol Boat </td>
+       <td> <input type="text" name="direction" placeholder='direction'> </td>
+       <td> <input type="text" name="coordinates" placeholder='coordinates'> </td>
     </tr>
   </table>
-<input type="submit" value="Submit">
+       <input type="submit" value="Submit">
 </form>
 
 

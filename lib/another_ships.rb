@@ -14,9 +14,8 @@ class Another_ships < Sinatra::Base
   end
 
   get '/new_game' do
-    @board = Board.new(Cell)
+    @board = board1
     @name = params[:name]
-    
     erb :new_game
   end
 

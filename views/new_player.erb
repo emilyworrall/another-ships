@@ -1,14 +1,27 @@
 <div>
   <% if @name == "" %>
+  
     <br><a href="/new_player">Please enter your name.</a>
+  
   <% elsif @name %>
+  
     Welcome <%= @name %>!
     <br><a href='/new_game'>Click here to start a game!</a>
+  
   <% else %>
-    <form action ="/new_player">
+    
+  <form action ="/new_player" style="font-family: Arial;">
+    <table>
       What's your name?
       <input type="text" name="name">
-      <input type="submit" value="Submit">
-    </form>
+      <br> Select Player
+      <select>
+      <option value="Player 1">Player 1</option>
+      <option value="Player 2">Player 2</option>
+      <input type="submit" value="Go">
+      </select>
+    </table>
+  </form>
+
   <% end %>
 </div>

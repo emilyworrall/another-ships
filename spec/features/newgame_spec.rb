@@ -14,5 +14,4 @@ feature 'Starting a new game' do
     click_button "Submit"
     expect(page).to have_content "Welcome harry!"
   end
-
 end
