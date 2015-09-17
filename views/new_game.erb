@@ -14,31 +14,42 @@
 
 <div style='display: inline-block; height: 370px; width: 480px'>
   <% @board.grid.each do |key,value| %>
-    <% if value.hit? == false %>
-      <div style='display: inline-block; border: 1px solid grey; height:
-      40px; width: 40px; background-color:#c6e2ff'>
-      <% key %>
-      </div>
+    <% if value.content.class == Water %>
+      <% if value.hit? == true %>
+        <div style='display: inline-block; border: 1px solid grey; height:
+        40px; width: 40px; background-color:#ffff32'>
+        </div>
+        <% key %>
+      <% else %>
+        <div style='display: inline-block; border: 1px solid grey; height:
+        40px; width: 40px; background-color:#c6e2ff'>
+        </div>
+        <% key %>
+      <% end %>
     <% else %>
-      <div style='display: inline-block; border: 1px solid grey; height:
-      40px; width: 40px; background-color:#ffff32'>
-      <% key %>
-      </div>
+      <% if value.hit? == true %>
+        <div style='display: inline-block; border: 1px solid grey; height:
+        40px; width: 40px; background-color:#ffff32'>
+        </div>
+        <% key %>
+      <% else %>
+        <div style='display: inline-block; border: 1px solid grey; height:
+        40px; width: 40px; background-color:#4a4849'>
+        </div>
+        <% key %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
 
 
-<form action='new_game' style="font-family: Arial;">
+<form action='/new_game' style="font-family: Arial;">
   <table style='width: 450px;'>
   <br> Aircraft Carrier
   <tr>
-     <td> <input type="text" name="   " placeholder='coordinates'> </td>
-     <td> <input type="text" name="direction" placeholder='direction'> </td>
+     <td> <input type="text" name="coords_1" placeholder='coordinates'> </td>
+     <td> <input type="text" name="orient_1" placeholder='direction'> </td>
     </tr>
   </table>
        <input type="submit" value="Submit">
 </form>
-
-
-
